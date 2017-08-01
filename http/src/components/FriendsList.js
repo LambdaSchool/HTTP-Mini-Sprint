@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getFriends } from '../actions';
-import axios from 'axios';
+import axios from 'axios';  // <---- currently unused
 
 class FriendsList extends Component {
     componentDidMount() {
