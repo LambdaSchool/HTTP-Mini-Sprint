@@ -29,3 +29,4 @@ Once you get through the sprint and have the list of friends being rendered by t
   * [Promises for Dummies](https://scotch.io/tutorials/javascript-promises-for-dummies) -- A pretty thorough and cohesive writeup on Promises. I would suggest starting here first.
   * [AJAX Documentation on MDN](https://developer.mozilla.org/en-US/docs/AJAX) -- A good place to start reading about and delving into the different parts that make up the AJAX standard.
   * [JavaScript Promises Plain and Simple](https://coligo.io/javascript-promises-plain-simple/) -- This article talks about using Promises in the context of making HTTP requests, which means it's pretty perfect for our use case. Note that in their examples they use the `fetch` API, which is an alternative to Axios.
+
