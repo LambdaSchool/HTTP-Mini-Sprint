@@ -30,7 +30,7 @@ class FriendsList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        friends: state.friends
+        friends: state.friends //map the state of store to local props
     };
 };
 
