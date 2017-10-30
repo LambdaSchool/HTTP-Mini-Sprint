@@ -45,6 +45,11 @@ app.post('/new-friend', (req, res) => {
 	res.send(friends);
 });
 
+app.post('/remove-friend', (req, res) => {
+	friends.splice(req.body.friendID, 1);
+	res.send(friends);
+});
+
 app.listen(5000, () => {
 	console.log('server listening on port 5000');
 });

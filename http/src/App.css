@@ -1,24 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+*, html, body, div, span, a, form, input, button ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: block;
+    padding: 1em;
+}
+
+button {
+    display: inline-block;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
 .App {
-  text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+
+form {
+    display: block;
+    max-width: 100%;
+
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+
+form input, form label {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    padding: .4em;
+    font-size: 1.2em;
+    border-bottom: .0125em solid #acadaf;
+    margin: .4em;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+form label {
+    display: none;
 }
