@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getFriends } from '../actions';
-import axios from 'axios';
+import { getFriends, removeFriend } from '../actions';
 
 class FriendsList extends Component {
     componentDidMount() {
         this.props.getFriends();
+    }
+
+    // OneEightHundredRemoveAFriend(event, friendID) {
+    removeAFriend(friendID) {
+        // event.preventDefault();
+        this.props.removeFriend(friendID);
     }
 
     render() {
@@ -15,6 +20,7 @@ class FriendsList extends Component {
                     {this.props.friends.map((friend, i) => {
                         return (
                             <li key={i}>
+                                <button onClick={this.removeAFriend.bind(this, i)}>Remove</button>
                                 <p>{`Friend ${i+1}`}</p>
                                 <p>{`Name: ${friend.name}`}</p>
                                 <p>{`Age: ${friend.age}`}</p>
@@ -34,4 +40,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps, { getFriends })(FriendsList);
+export default connect(mapStateToProps, { getFriends, removeFriend })(FriendsList);
