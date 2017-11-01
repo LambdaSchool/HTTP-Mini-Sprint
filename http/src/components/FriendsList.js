@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getFriends } from '../actions';
-import axios from 'axios';
+// import axios from 'axios';
 
 class FriendsList extends Component {
     componentDidMount() {
@@ -9,6 +9,7 @@ class FriendsList extends Component {
     }
 
     render() {
+        console.log(this.props.friends);
         return (
             <div>
                 <ul>
@@ -33,5 +34,4 @@ const mapStateToProps = (state) => {
         friends: state.friends
     };
 };
-
 export default connect(mapStateToProps, { getFriends })(FriendsList);
