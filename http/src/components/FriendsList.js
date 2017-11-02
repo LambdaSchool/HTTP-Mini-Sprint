@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getFriends } from '../actions';
+import { addFriends } from '../actions';
 import axios from 'axios';
 
 class FriendsList extends Component {
