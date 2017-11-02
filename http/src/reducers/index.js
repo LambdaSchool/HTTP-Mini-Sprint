@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import { GET_FRIENDS } from '../actions';
+import axios from 'axios';
 
 const friendsReducer = (friends = [], action) => {
     switch(action.type) {
         case GET_FRIENDS:
-            return action.payload.data;
+				    return action.payload.data
         default:
             return friends;
     }
