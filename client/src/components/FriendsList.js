@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class FriendsList extends Component {
+  state = {
+    friends: []
+  }
+
+  componentDidMount() {
+    const endpoint = 'http://localhost:5000/friends';
+
+    axios.get(endpoint).then((response) => {
+      this.setState(() => ({ friends: response.data }))
+    }).catch((error) => {
+
+    })
+
+  }
   render() {
     return (
       <div>
