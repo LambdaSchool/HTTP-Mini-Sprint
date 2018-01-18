@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class FriendsList extends Component {
+  state = {
+    friends: [],
+  }
+
+  componentDidMount() {
+    const stream = 'http://localhost:5000/friends';
+
+    axios.get(stream)
+      .then((response) => {
+        this.setState({ friends: response.data });
+      })
+      .catch(() => {
+        console.error("unknown error");
+      })
+  }
+
   render() {
     return (
       <div>
