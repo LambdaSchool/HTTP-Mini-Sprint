@@ -2,6 +2,36 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class FriendsList extends Component {
+  state = {
+    friends: [],
+  }
+
+  componentDidMount() {
+    const endpoint = 'http://localhost:5000/friends';
+
+    axios
+      .get(endpoint)
+      .then(response => {
+        this.setState({friends: response.data })
+      })
+      .catch(error => {
+        console.log('ERROR: ', error);
+      })
+    const newFriend = {
+      id: this.state.friends.length,
+      name: 'Perry',
+      age: 49,
+      email: 'perry@lambdaschool.com',
+    }
+    axios.post(endpoint, newFriend)
+      .then(response => {
+        this.setState({friends: response.data })
+      })
+      .catch(error => {
+        console.log('ERROR: ', error);
+      })
+  }
+
   render() {
     return (
       <div>
