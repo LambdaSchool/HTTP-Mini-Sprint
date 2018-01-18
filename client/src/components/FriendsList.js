@@ -13,7 +13,7 @@ class FriendsList extends Component {
     axios
     .get(endpoint)
     .then(response => {this.setState({friends: response.data})})
-    .catch(error => {this.setState({error: 'An error occurred' })})
+    .catch(error => {this.setState({error: 'An error occurred with the server request' })})
     
   }
 
@@ -21,6 +21,7 @@ class FriendsList extends Component {
     return (
       <div>
         <div className="friend-title">Lambda Friends</div>
+        <div>{this.state.error}</div>
         <ul className="friend-grid">
           {this.state.friends.map(friend => {
             return (
