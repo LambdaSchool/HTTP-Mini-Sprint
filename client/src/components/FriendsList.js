@@ -17,22 +17,13 @@ class FriendsList extends Component {
       .catch(error => {
         console.log('ERROR: ', error);
       })
-
     const newFriend = {
-      name: 'Perry',
-      email: 'perry@lambdaschool.com',
-      age: 49,
       id: this.state.friends.length,
+      name: 'Perry',
+      age: 49,
+      email: 'perry@lambdaschool.com',
     }
     axios.post(endpoint, newFriend)
-      .then(response => {
-        this.setState({friends: response.data })
-      })
-      .catch(error => {
-        console.log('ERROR: ', error);
-      })
-    axios
-      .get(endpoint)
       .then(response => {
         this.setState({friends: response.data })
       })
