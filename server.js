@@ -56,6 +56,6 @@ app.post('/friends', (req, res) => {
 	res.send(friends);
 });
 
-app.listen(5000, () => {
+app.listen(9000, () => {
 	console.log('server listening on port 5000');
 });
