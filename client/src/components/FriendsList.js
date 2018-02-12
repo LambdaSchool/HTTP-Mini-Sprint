@@ -1,7 +1,23 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 class FriendsList extends Component {
+  state = {
+    friends: []
+  };
+
+  componentDidMount() {
+    const server = "https://localhost:5000/friends";
+
+    axios
+      .get(final)
+      .then(response => {
+        this.setState(() => ({ friends: response.data }));
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
   render() {
     return (
       <div>
