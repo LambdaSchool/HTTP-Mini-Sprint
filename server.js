@@ -48,12 +48,16 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/friends', (req, res) => {
-	res.send(friends);
+	setTimeout(() => {
+		res.send(friends);
+	}, 500);
 });
 
 app.post('/friends', (req, res) => {
 	friends.push(req.body);
-	res.send(friends);
+	setTimeout(() => {
+		res.send(friends);
+	}, 500);
 });
 
 const port = 5000;
