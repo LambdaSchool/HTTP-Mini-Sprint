@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class FriendsList extends Component {
-  render() {
+ state = {
+    friends : [],
+};
+
+	render() {
     return (
       <div>
         <div className="friend-title">Lambda Friends</div>
@@ -20,6 +24,18 @@ class FriendsList extends Component {
       </div>
     );
   }
+ componentDidMount() {
+     const data = axios.get('http://localhost:5000/friends')
+			 .then((response) => {
+					 console.log('data', response.data);
+					 this.setState({friends: response.data});
+					 })		 
+			 .catch((error) => {
+					 console.log('there was an error', error);
+			 })		 
+					 
+	    console.log('data', data);
+   }
 }
 
 export default FriendsList;
