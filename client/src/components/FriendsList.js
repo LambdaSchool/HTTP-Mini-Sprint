@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+export default FriendsList;
+
 class FriendsList extends Component {
   componentDidMount() {
     axios  
@@ -32,4 +34,4 @@ class FriendsList extends Component {
   }
 }
 
-export default FriendsList;
+
