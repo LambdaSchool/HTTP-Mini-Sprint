@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+  
+export default class FriendsList extends Component {
+  state = {
+    friends: [],
+  };
 
-export default FriendsList;
-
-class FriendsList extends Component {
   componentDidMount() {
     axios  
       .get('http://localhost:5000/friends') 
