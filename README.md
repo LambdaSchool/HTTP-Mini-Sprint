@@ -7,7 +7,7 @@
 In this mini-sprint, you'll be eased into the code base for the actual HTTP sprint. After forking, then cloning this repository, take a moment to look over the different pieces that are already in here. There is a "server" folder and a "client" folder. The "server" will _serve_ up some data, and the "client" folder has the web application (which will access some data from the server.) Don't worry about the server for now - we will cover these in depth in the coming weeks. If you look in the "client" directory, there shouldn't be anything too scary; it's just another React app created using `create-react-app` with some custom styling. The important bits for the _client_ are inside the components folder in the "src" directory.
 
 ## Running the Application
-To run the mini-sprint code, first run `npm install` in the "server" directory. Then run `npm start` to run the server. In _another_ terminal, `cd` into the `client` directory, run `npm install`, then `npm start`. You'll see that we have a non-functioning React app with some compilation errors.
+To run the mini-sprint code, first run `yarn` in the "server" directory. Then run `yarn start` to run the server. In _another_ terminal, `cd` into the `client` directory, run `yarn`, then `yarn start`. You'll see that we have a non-functioning React app with some compilation errors.
 
 ## Instructions
 The `FriendsList` component renders an array of friend objects. Your job for this mini sprint is to add the code necessary inside `FriendsList.js` to fetch this data from the server and populate the list.
