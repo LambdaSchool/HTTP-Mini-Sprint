@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './Friends.css';
 
+// so this is a way of exporting a class the moment it is built
 export default class FriendsList extends Component {
   constructor(){
     super()
@@ -11,6 +12,18 @@ export default class FriendsList extends Component {
       age: '',
       email: ''
     }
+  }
+
+  componentDidMount(){
+    this.fetchUsers()
+  }
+
+  fetchUsers = () => {
+    axios.get('http://localhost:5000/friends')
+      .then(response => {
+        this.setState({ friends: response.data })
+      })
+      .catch(err => console.log(err))
   }
 }
 
