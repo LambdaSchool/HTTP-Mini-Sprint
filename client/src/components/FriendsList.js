@@ -13,7 +13,9 @@ export default class FriendsList extends Component {
       email: ''
     }
   }
-
+  // if the component is mounted to the DOM,
+  // then perform this action on it
+  // in this case fetchUsers()
   componentDidMount(){
     this.fetchUsers()
   }
