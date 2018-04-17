@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const app = express();
 
+// so friends is an array of objects
 let friends = [
 	{
 		id: 1,
@@ -46,7 +47,9 @@ let friends = [
 app.use(bodyParser.json());
 
 app.use(cors());
-
+// why are both the req and res parameters
+// used when only res is accessed 
+// in the function?
 app.get('/friends', (req, res) => {
 	res.send(friends);
 });
