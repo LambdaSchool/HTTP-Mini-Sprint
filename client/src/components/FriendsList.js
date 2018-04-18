@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Friends.css';
+import '../Friends.css';
 
 // so this is a way of exporting a class the moment it is built
 export default class FriendsList extends Component {
@@ -63,4 +63,4 @@ export default class FriendsList extends Component {
   }
 }
 
-export default FriendsList;
+
