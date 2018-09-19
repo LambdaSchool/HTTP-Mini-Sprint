@@ -16,6 +16,7 @@ Hint: The endpoint to get a list of friends is: [`http://localhost:5000/friends`
 
 Once you get through the sprint and have the list of friends being rendered by the `FriendsList` component, take some time to read about HTTP, Promises, AJAX, and any of the other topics we touched upon during the lecture.
 
+
 ## Helpful Links
   * [Promises for Dummies](https://scotch.io/tutorials/javascript-promises-for-dummies) -- A pretty thorough and cohesive writeup on Promises. I would suggest starting here first.
   * [AJAX Documentation on MDN](https://developer.mozilla.org/en-US/docs/AJAX) -- A good place to start reading about and delving into the different parts that make up the AJAX standard.
