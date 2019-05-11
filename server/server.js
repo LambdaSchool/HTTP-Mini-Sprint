@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const app = express();
 
+// so friends is an array of objects
 let friends = [
 	{
 		id: 1,
@@ -46,7 +47,9 @@ let friends = [
 app.use(bodyParser.json());
 
 app.use(cors());
-
+// why are both the req and res parameters
+// used when only res is accessed 
+// in the function? just curious
 app.get('/friends', (req, res) => {
 	res.send(friends);
 });
@@ -55,7 +58,9 @@ app.post('/friends', (req, res) => {
 	friends.push(req.body);
 	res.send(friends);
 });
-
+// so this function takes two
+// parameters, a port number,
+// and a callback function
 app.listen(5000, () => {
 	console.log('server listening on port 5000');
 });
